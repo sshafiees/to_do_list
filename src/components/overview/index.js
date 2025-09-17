@@ -1,8 +1,8 @@
-import NumberBlock from "./numberBlock";
-
+import NumberBlock from './numberBlock';
+import Block from '../layout/block';
 export default function Overview() {
   return (
-    <div className="shadow-md bg-white border border-gray-100 rounded-md p-4 mt-5">
+    <Block>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">خلاصه کارها</h2>
       </div>
@@ -12,6 +12,6 @@ export default function Overview() {
         <NumberBlock number={3} title="انجام شده" color="green" />
         <NumberBlock number={20} title="مجموع" color="red" />
       </div>
-    </div>
+    </Block>
   );
 }
