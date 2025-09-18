@@ -1,3 +1,4 @@
+import React from 'react';
 import TaskItem from './taskItem';
 
 export default function TasksList() {
@@ -5,15 +6,14 @@ export default function TasksList() {
     <>
       <TaskItem
         taskId="1"
-        title="عنوان تسک 1"
-        description="توضیحات تسک 1"
+        title="عنوان تسک"
+        description="توضیحات تسک"
         dueDate={new Date(Date.now() + 86400000)} // date +1 day
         createdAt={new Date(Date.now() - 86400000)}
         priority="high"
         status="inProgress"
         category="توسعه"
       />
-
       <TaskItem
         taskId="2"
         title="عنوان تسک 2"
@@ -22,9 +22,8 @@ export default function TasksList() {
         createdAt={new Date(Date.now() - 86400000)}
         priority="medium"
         status="todo"
-        category="تست"
+        category="توسعه"
       />
-
       <TaskItem
         taskId="3"
         title="عنوان تسک 3"
@@ -33,7 +32,7 @@ export default function TasksList() {
         createdAt={new Date(Date.now() - 86400000)}
         priority="low"
         status="done"
-        category="پشتیبانی"
+        category="توسعه"
       />
     </>
   );
