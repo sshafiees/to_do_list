@@ -1,6 +1,11 @@
 import React from 'react';
+import { SelectItem } from '../../constants/filters';
 
-export default function FilterItem({ title, listItems }) {
+type FilterItemProps = {
+  title: string;
+  listItems: SelectItem[];
+};
+export default function FilterItem({ title, listItems }: FilterItemProps) {
   return (
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-1">

@@ -1,7 +1,12 @@
 import React from 'react';
 import { colorClasses } from '../../constants/colors';
+import { numberBlockProps } from '../../types/overview';
 
-export default function NumberBlock({ number, title, color }) {
+export default function NumberBlock({
+  number,
+  title,
+  color,
+}: numberBlockProps) {
   return (
     <div className="text-center">
       <h2
