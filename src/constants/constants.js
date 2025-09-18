@@ -1,55 +1,55 @@
 export const categories = [
   {
-    value: "all",
-    label: "همه",
+    value: 'all',
+    label: 'همه',
   },
   {
-    value: "personal",
-    label: "شخصی",
+    value: 'personal',
+    label: 'شخصی',
   },
   {
-    value: "work",
-    label: "کاری",
+    value: 'work',
+    label: 'کاری',
   },
   {
-    value: "fun",
-    label: "تفریحی",
+    value: 'fun',
+    label: 'تفریحی',
   },
 ];
 
 export const status = [
   {
-    value: "all",
-    label: "همه",
+    value: 'all',
+    label: 'همه',
   },
   {
-    value: "personal",
-    label: "شخصی",
+    value: 'personal',
+    label: 'شخصی',
   },
   {
-    value: "work",
-    label: "کاری",
+    value: 'work',
+    label: 'کاری',
   },
   {
-    value: "fun",
-    label: "تفریحی",
+    value: 'fun',
+    label: 'تفریحی',
   },
 ];
 export const priority = [
   {
-    value: "all",
-    label: "همه",
+    value: 'all',
+    label: 'همه',
   },
   {
-    value: "personal",
-    label: "شخصی",
+    value: 'personal',
+    label: 'شخصی',
   },
   {
-    value: "work",
-    label: "کاری",
+    value: 'work',
+    label: 'کاری',
   },
   {
-    value: "fun",
-    label: "تفریحی",
+    value: 'fun',
+    label: 'تفریحی',
   },
 ];
