@@ -9,13 +9,6 @@ import {
   ChatBubbleLeftIcon,
 } from '@heroicons/react/24/outline';
 
-const fmt = d =>
-  new Intl.DateTimeFormat('fa-IR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).format(d);
-
 export default function TaskItem({
   taskId,
   title,
@@ -57,7 +50,7 @@ export default function TaskItem({
 
       <p className="mb-2">{description}</p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm text-gray-600">
+      <div className="flex flex-wrap items-center justify-start gap-2 text-sm text-gray-600">
         <div className="flex items-center gap-1">
           <MapPinIcon className="h-4 w-4" />
           <span>{category}</span>
@@ -65,12 +58,16 @@ export default function TaskItem({
 
         <div className="flex items-center gap-1">
           <CalendarIcon className="h-4 w-4" />
-          <span>ثبت: {fmt(createdAt)}</span>
+          <span>
+            {createdAt ? new Date(createdAt).toLocaleDateString('fa-IR') : ''}
+          </span>
         </div>
 
         <div className="flex items-center gap-1">
           <CalendarIcon className="h-4 w-4" />
-          <span>موعد: {fmt(dueDate)}</span>
+          <span>
+            {dueDate ? new Date(dueDate).toLocaleDateString('fa-IR') : ''}
+          </span>
         </div>
 
         <div className="flex items-center gap-1">
