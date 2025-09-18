@@ -1,5 +1,4 @@
-// src/components/overview/numberBlock.js
-
+import React from 'react';
 import { colorClasses } from '../../constants/colors';
 
 export default function NumberBlock({ number, title, color }) {

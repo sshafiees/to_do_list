@@ -1,11 +1,19 @@
 export const priorityChip = {
-  low: { label: 'پایین', color: 'bg-green-300', textColor: 'text-green-800' },
+  low: {
+    label: 'پایین',
+    color: 'bg-green-300',
+    textColor: 'text-green-800',
+  },
   medium: {
     label: 'متوسط',
     color: 'bg-yellow-300',
     textColor: 'text-yellow-800',
   },
-  high: { label: 'بالا', color: 'bg-red-300', textColor: 'text-red-800' },
+  high: {
+    label: 'بالا',
+    color: 'bg-red-300',
+    textColor: 'text-red-800',
+  },
 };
 
 export const statusChip = {
