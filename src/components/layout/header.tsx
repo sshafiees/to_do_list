@@ -19,7 +19,7 @@ export default function Header() {
             </div>
             <div className="flex items-center">
               <Image
-                src="/avatar.png"
+                src="/man.png"
                 alt="User Avatar"
                 width={32}
                 height={32}
