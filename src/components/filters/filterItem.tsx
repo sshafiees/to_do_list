@@ -1,10 +1,7 @@
 import React from 'react';
 import { SelectItem } from '../../constants/filters';
+import { FilterItemProps } from '../../types/filters';
 
-type FilterItemProps = {
-  title: string;
-  listItems: SelectItem[];
-};
 export default function FilterItem({ title, listItems }: FilterItemProps) {
   return (
     <div>
