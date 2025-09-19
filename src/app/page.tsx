@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import Search from '../components/search';
 import Filters from '../components/filters';
 import Overview from '../components/overview';
-import TasksList from '../components/tasks'; // چون داخل پوشه tasks فایل index.tsx داری
-import { taskList } from '../components/mocks/tasks';
+import TasksList from '../components/tasks';
+import { taskList } from '../mocks/tasks';
+
 export default function Home() {
   const [searchText, setSearchText] = useState<string>('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [priorityFilter, setPriorityFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [sortOption, setSortOption] = useState<string>('latest');
+
   const filteredTasks = taskList.filter(task => {
     if (categoryFilter !== 'all' && task.category !== categoryFilter) {
       return false;
@@ -25,6 +27,16 @@ export default function Home() {
       task.title.includes(searchText) || task.description.includes(searchText)
     );
   });
+
+  filteredTasks.sort((a, b) => {
+    if (sortOption === 'latest') {
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    } else if (sortOption === 'oldest') {
+      return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+    }
+    return 0;
+  });
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16">
       <div className="container h-full">
@@ -40,7 +52,7 @@ export default function Home() {
             setSortOption={setSortOption}
           />
           <Search searchText={searchText} setSearchText={setSearchText} />
-          <Overview />
+          <Overview taskList={filteredTasks} />
           <TasksList taskList={filteredTasks} />
         </div>
       </div>
