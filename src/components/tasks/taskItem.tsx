@@ -9,7 +9,7 @@ import {
   CalendarIcon,
   ClockIcon,
 } from '@heroicons/react/24/solid';
-import { TaskItemProps } from '../../types/taks';
+import { TaskItemType } from '../../types/taks';
 
 export default function TaskItem({
   taskId,
@@ -20,7 +20,7 @@ export default function TaskItem({
   priority,
   status,
   category,
-}: TaskItemProps) {
+}: TaskItemType) {
   const priorityTag = priorityChip[priority] || {};
   const statusTag = statusChip[status] || {};
 

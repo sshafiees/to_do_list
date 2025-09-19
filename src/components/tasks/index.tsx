@@ -1,9 +1,9 @@
 import React from 'react';
 import TaskItem from './taskItem';
-import { TaskItemProps } from '../../types/taks';
+import { TaskItemType } from '../../types/taks';
 
 type TasksListProps = {
-  taskList: TaskItemProps[];
+  taskList: TaskItemType[];
 };
 export default function TasksList({ taskList }: TasksListProps) {
   return (

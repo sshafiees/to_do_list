@@ -1,10 +1,10 @@
-import { TaskItemProps } from '../../types/taks';
+import { TaskItemType } from '../../types/taks';
 
-export const taskList: TaskItemProps[] = [
+export const taskList: TaskItemType[] = [
   {
     taskId: '1',
-    title: 'Learn React',
-    description: 'Understand the basics of React.',
+    title: 'یادگیری React',
+    description: 'مبانی React را درک کنید.',
     dueDate: new Date('2023-09-30'),
     createdAt: new Date('2023-09-01'),
     priority: 'high',
@@ -13,32 +13,42 @@ export const taskList: TaskItemProps[] = [
   },
   {
     taskId: '2',
-    title: 'Build a Todo App',
-    description: 'Create a simple todo app using React.',
+    title: 'ساخت یک اپلیکیشن Todo',
+    description: 'ایجاد یک اپلیکیشن Todo ساده با استفاده از React.',
     dueDate: new Date('2023-10-15'),
     createdAt: new Date('2023-09-05'),
     priority: 'medium',
-    status: 'todo',
+    status: 'notStarted',
     category: 'work',
   },
   {
     taskId: '3',
-    title: 'Write Tests',
-    description: 'Write unit tests for the todo app.',
+    title: 'نوشتن تست‌ها',
+    description: 'نوشتن تست‌های واحد برای اپلیکیشن Todo.',
     dueDate: new Date('2023-10-20'),
     createdAt: new Date('2023-09-10'),
     priority: 'low',
-    status: 'todo',
+    status: 'notStarted',
     category: 'work',
   },
   {
     taskId: '4',
-    title: 'Deploy the App',
-    description: 'Deploy the todo app to production.',
+    title: 'انتشار اپلیکیشن',
+    description: 'انتشار اپلیکیشن Todo در محیط تولید.',
     dueDate: new Date('2023-10-25'),
     createdAt: new Date('2023-09-15'),
     priority: 'high',
-    status: 'todo',
+    status: 'notStarted',
     category: 'work',
+  },
+  {
+    taskId: '5',
+    title: 'بازبینی کد',
+    description: 'بازبینی کد برای بهترین شیوه‌ها.',
+    dueDate: new Date('2023-10-30'),
+    createdAt: new Date('2023-09-20'),
+    priority: 'medium',
+    status: 'notStarted',
+    category: 'fun',
   },
 ];
