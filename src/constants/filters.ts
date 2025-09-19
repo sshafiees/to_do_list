@@ -1,7 +1,8 @@
-export type SelectItem = {
-  value: string;
-  label: string;
-};
+import { StatusType } from '../types/taks';
+
+export type SelectItem = { label: string; value: string };
+export type StatusItem = { label: string; value: StatusType | 'all' };
+
 export const categories: SelectItem[] = [
   {
     value: 'all',
@@ -40,21 +41,21 @@ export const priorities: SelectItem[] = [
   },
 ];
 
-export const statuses: SelectItem[] = [
+export const statuses: StatusItem[] = [
   {
     value: 'all',
     label: 'همه',
   },
   {
-    value: 'completed',
+    value: 'done',
     label: 'تکمیل شده',
   },
   {
-    value: 'in-progress',
+    value: 'inProgress',
     label: 'در حال انجام',
   },
   {
-    value: 'not_started',
+    value: 'notStarted',
     label: 'بدون وضعیت',
   },
 ];
