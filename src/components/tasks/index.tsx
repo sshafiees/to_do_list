@@ -1,27 +1,26 @@
 import React from 'react';
 import TaskItem from './taskItem';
-import { taskList } from '../../mocks/tasks';
+import { TaskItemProps } from '../../types/taks';
 
-export default function TasksList({ searchText }: { searchText: string }) {
+type TasksListProps = {
+  taskList: TaskItemProps[];
+};
+export default function TasksList({ taskList }: TasksListProps) {
   return (
     <div>
-      {taskList
-        .filter(task =>
-          task.title.toLowerCase().includes(searchText.toLowerCase())
-        )
-        .map(task => (
-          <TaskItem
-            key={task.taskId}
-            taskId={task.taskId}
-            title={task.title}
-            description={task.description}
-            dueDate={task.dueDate}
-            createdAt={task.createdAt}
-            priority={task.priority}
-            status={task.status}
-            category={task.category}
-          />
-        ))}
+      {taskList.map(task => (
+        <TaskItem
+          key={task.taskId}
+          taskId={task.taskId}
+          title={task.title}
+          description={task.description}
+          dueDate={task.dueDate}
+          createdAt={task.createdAt}
+          priority={task.priority}
+          status={task.status}
+          category={task.category}
+        />
+      ))}
     </div>
   );
 }
