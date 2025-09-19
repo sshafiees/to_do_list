@@ -4,7 +4,7 @@ import Search from '../components/search';
 import Filters from '../components/filters';
 import Overview from '../components/overview';
 import TasksList from '../components/tasks';
-import { taskList } from '../mocks/tasks';
+import { taskList } from '../components/mocks/tasks';
 
 export default function Home() {
   const [searchText, setSearchText] = useState<string>('');
