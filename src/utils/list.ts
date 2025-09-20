@@ -1,5 +1,8 @@
-import { TaskItemType } from '../types/tasks';
+import { TaskItemType, StatusType } from '../types/tasks';
 
-export const countTasksByStatus = (tasks: TaskItemType[], status: string) => {
+export const countTasksByStatus = (
+  tasks: TaskItemType[],
+  status: StatusType
+): number => {
   return tasks.filter(task => task.status === status).length;
 };

@@ -8,7 +8,7 @@ export default function NumberBlock({
   color,
 }: numberBlockProps) {
   return (
-    <div className="text-center">
+    <div className="text-center" aria-label={title} role="group">
       <h2
         className={`text-2xl font-bold ${
           colorClasses[color] || 'text-gray-500'
