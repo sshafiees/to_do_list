@@ -1,5 +1,6 @@
-// Moved to tasks.ts (corrected filename). Keeping a re-export shim for safety during refactor.
 export type StatusType = 'inProgress' | 'notStarted' | 'done';
+
+export type PriorityType = 'low' | 'medium' | 'high';
 
 export type TaskItemType = {
   taskId: string;
@@ -7,7 +8,7 @@ export type TaskItemType = {
   description: string;
   dueDate: Date;
   createdAt: Date;
-  priority: 'low' | 'medium' | 'high';
+  priority: PriorityType;
   status: StatusType;
   category: string;
 };

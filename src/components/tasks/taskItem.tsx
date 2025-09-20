@@ -9,7 +9,7 @@ import {
   CalendarIcon,
   ClockIcon,
 } from '@heroicons/react/24/solid';
-import { TaskItemType } from '../../types/taks';
+import { TaskItemType } from '../../types/tasks';
 
 export default function TaskItem({
   taskId,

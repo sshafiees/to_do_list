@@ -1,4 +1,4 @@
-import { StatusType } from '../types/taks';
+import { StatusType } from '../types/tasks';
 
 type ChipType = { label: string; color: string; textColor: string };
 

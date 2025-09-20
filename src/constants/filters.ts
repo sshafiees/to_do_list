@@ -1,4 +1,4 @@
-import { StatusType } from '../types/taks';
+import { StatusType } from '../types/tasks';
 
 export type SelectItem = { label: string; value: string };
 export type StatusItem = { label: string; value: StatusType | 'all' };
