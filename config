@@ -1,0 +1,7 @@
+# اکانت جدید
+Host github.com-new
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/to_do_list
+    AddKeysToAgent yes
+    IdentitiesOnly yes
